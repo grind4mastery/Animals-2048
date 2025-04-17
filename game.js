@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // function initializePokiSDK() {
-  //   if (window.PokiSDK) {
-  //     PokiSDK.init()
-  //       .then(() => {
-  //         console.log("Poki SDK successfully initialized");
-  //         startGameLogic();
-  //       })
-  //       .catch(() => {
-  //         console.log("Poki SDK failed to initialize, loading game anyway.");
-  //         startGameLogic();
-  //       });
-  //   } else {
-  //     console.log("Poki SDK not found, loading game directly.");
-  //     startGameLogic();
-  //   }
-  // }
+  function initializePokiSDK() {
+    if (window.PokiSDK) {
+      PokiSDK.init()
+        .then(() => {
+          console.log("Poki SDK successfully initialized");
+          startGameLogic();
+        })
+        .catch(() => {
+          console.log("Poki SDK failed to initialize, loading game anyway.");
+          startGameLogic();
+        });
+    } else {
+      console.log("Poki SDK not found, loading game directly.");
+      startGameLogic();
+    }
+  }
 
   function startGameLogic() {
     const GRID_SIZE = 4;
